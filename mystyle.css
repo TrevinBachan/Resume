@@ -6,6 +6,7 @@ body {
   }
   p {
     color: red;
+<<<<<<< HEAD
   }
 
   /* Dropdown Button */
@@ -52,3 +53,6 @@ body {
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+=======
+  }
+>>>>>>> cd833ff8a42952088c14496bec71d4cfcc33eb0b
