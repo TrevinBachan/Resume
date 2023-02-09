@@ -7,7 +7,7 @@
      <script>
         function hello() {
         alert("Hello!"); 
-        h = document.querySelector("h1");
+        h = document.querySelector("#second");
         console.log(h);
         h.innerHTML("HEllo");
     }
@@ -17,8 +17,11 @@
         <button onclick="hello();">
             Say Hello
         </button>
-        <h1>
+        <h1 id="first" style= "color:blue;">
             Hello
+        </h1>
+        <h1 id ="second" style= "color:red;">
+
         </h1>
     </body>
 </html>
