@@ -1,22 +1,75 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <style>
 
         </style>
      <script>
+
+        let counter = 0;
+        const MAX_CAPACITY = 9;
+        let errorMessage = "";
+
+        function add(){
+
+            if(counter <MAX_CAPACITY){
+            counter++;
+            errorMessage = "";
+            } else { 
+                errorMessage = "Full"; 
+            }
+            updateView();
+        }
+
+
+        function sub(){
+            if (counter > 0 ){
+                counter--;
+                errorMessage = "";
+            } else {
+                errorMessage = "No value to subtract";
+            }
+            
+            updateView();
+        }
+
+
         function hello() {
         alert("Hello!"); 
-        h = document.querySelector("#second");
         console.log(h);
-        h.innerHTML("HEllo");
     }
+
+    function updateView() {
+        h = document.querySelector("#display");
+        h.innerHTML = ("Score: " + counter);
+        document.querySelector("#error").innerHTML = errorMessage;
+    }
+
      </script>   
     </head>
+
+
     <body>
+
+        <h1 id="display" style="color:rgb(0, 255, 17);"> 
+        0
+        </h1>
+        <h2 id="error" style="color:red" > </h2>
+
         <button onclick="hello();">
             Say Hello
         </button>
+
+        <button onclick="add();">
+            +
+        </button>
+
+        <button onclick="sub();">
+            _
+        </button>
+
+
         <h1 id="first" style= "color:blue;">
             Hello
         </h1>
